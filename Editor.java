@@ -236,7 +236,6 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 					if (ans == 1)
 						return;
 
-
 				if (file == null) {
 					saveAs(actions[1]);
 					return;
@@ -257,9 +256,6 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 			changed = false;
 			setTitle("Editor");
 		}
-
-
-
 
 	private void loadFile() {
 		JFileChooser dialog = new JFileChooser(System.getProperty("user.home"));
@@ -334,23 +330,11 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 		JOptionPane.showMessageDialog(null, e, "Error", 0);
 	}
 
-
-
-
-
-
-
-
-
 	private PrintWriter getWriter(File file) throws IOException {
 		FileWriter fw = new FileWriter(file);
 		BufferedWriter bw = new BufferedWriter(fw);
 		return new PrintWriter(bw);
 	}
-
-
-
-
 
 	@Override
 	public void insertUpdate(DocumentEvent e) {
