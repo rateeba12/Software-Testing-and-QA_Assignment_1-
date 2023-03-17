@@ -1,28 +1,12 @@
+1- The problems in the application:
+
 ![123](https://user-images.githubusercontent.com/120324997/226065987-63ec8a7c-7025-418b-9f27-45e793bf51b4.png)
 ![1234](https://user-images.githubusercontent.com/120324997/226065992-850e852c-f1f3-4142-97ec-572fd8884ab2.png)
 ![12345](https://user-images.githubusercontent.com/120324997/226065993-d9ca1d9a-8705-4f90-89a5-00aa562930a5.png)
 
 
-1- The problems in the application:
-FindDialog file: 
-Empty methods.
-blocks of commented-out lines of code.
-
-
-Editor file:
-Method names do not comply with a naming convention.
-Using `system.out` instead of `logger` to log messages.
-Cognitive complexity is too high in a method.
-There is a condition is always 'true' 
-Throw generic exceptions.
-
-
-
-
 2- Categorize the issues found by SonarQube and the explain how these issues affect the software quality: 
 Editor file :
-
-
 —---------------------------------------------------
 ahmad 
 (147, 13): Cognitive complexity of methods should not be too high
@@ -114,8 +98,7 @@ Refer
 
 
 findDialog file : 
-1 - (22,8)
- هك لزم ايكون 
+1 - (22,8) 
 :Product revision
 (26,15)multiple variables should not be declared on the same line. testability and maintainability
 
@@ -125,16 +108,6 @@ findDialog file :
 
 4- (84,7) Code smell, major. commented out lines of code bloats programs and reduces readability.
 
-
-Q4:
-False Positive: SonarQube flags a line of code as having too high of a complexity score when in fact the code is well-structured and easily maintainable. This is a false positive because the complexity score does not accurately reflect the quality of the code.
-
-The complexity score that SonarQube uses to identify complex code is based on a set of rules that can be adjusted to suit specific project requirements. For example, a complex method may be flagged as a potential issue, but if the method is well-organized, clearly documented, and performs its intended function effectively, it may not actually be a problem.
-
-
-False Negative: SonarQube misses a potential logic error in a line of code that could cause incorrect behavior or results. This is a false negative because logic errors can be difficult to detect and can cause serious problems in the code.
-
-SonarQube relies on static code analysis to identify potential issues, and it may miss logic errors that require dynamic testing to uncover. This is because dynamic testing involves executing the code and observing its behavior in real-time, while static analysis examines the code's structure and syntax without actually running it.
 —----------------------------------------------------------------------------------------------------------------------
 Mosaab
 (3, 7),(7, 7),(18, 7),(19,7): unnecessary imports should be removed.
@@ -156,6 +129,17 @@ If a non-serializable field is not being transient, means it will be included in
 (127, 13): methods should not be empty.
 Its critical code smell.
 Maintainability: it will make it difficult for developer to understand the need of the method when its empty which will make it hard to maintain the code whenever its needed.
+
+-------------------------------------------------
+Q4:
+False Positive: SonarQube flags a line of code as having too high of a complexity score when in fact the code is well-structured and easily maintainable. This is a false positive because the complexity score does not accurately reflect the quality of the code.
+
+The complexity score that SonarQube uses to identify complex code is based on a set of rules that can be adjusted to suit specific project requirements. For example, a complex method may be flagged as a potential issue, but if the method is well-organized, clearly documented, and performs its intended function effectively, it may not actually be a problem.
+
+
+False Negative: SonarQube misses a potential logic error in a line of code that could cause incorrect behavior or results. This is a false negative because logic errors can be difficult to detect and can cause serious problems in the code.
+
+SonarQube relies on static code analysis to identify potential issues, and it may miss logic errors that require dynamic testing to uncover. This is because dynamic testing involves executing the code and observing its behavior in real-time, while static analysis examines the code's structure and syntax without actually running it.
 
 
 
