@@ -52,8 +52,9 @@ Its major bug where a quality flaw that can highly impact in production.
  Maintainability: it introduces difficulty in reading and understanding the code as editing any variable may require editing the entire line.
 
 
-ahmad
-—-------------------------------------------------------------------------------------------7
+
+—--------------------------------------
+Rateeba
 
 
 11-   (67,14) Code smell, minor. Method name does not comply with a naming convention, Shared naming conventions allow teams to collaborate efficiently. This rule checks that all method names match a provided regular expression.
