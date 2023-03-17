@@ -52,17 +52,6 @@ Its major bug where a quality flaw that can highly impact in production.
  Maintainability: it introduces difficulty in reading and understanding the code as editing any variable may require editing the entire line.
 
 
-
-
-  
-
-
-
-
-
-
-
-
 ahmad
 —-------------------------------------------------------------------------------------------7
 
@@ -80,33 +69,23 @@ Refer :Maintainability,testability .
 
 13- (227,14) Refactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.
 code smell, major. Cognitive Complexity too high in method, it is a measure of how hard the control flow of a method is to understand. Methods with high Cognitive Complexity will be difficult to maintain.
-refer :
+refer :Maintainability,Flexibility,Testability.
 
 14 - (238,9) Condition 'changed' is always 'true' 
  bug, major.Conditional expression is always true and leads to dead code. Such code is always buggy and should never be used in production.
-Refer 
+Refer: Maintainability,Flexibility
 15- (256,17) Define and throw a dedicated exception instead of using a generic one.
 Code smell, major. Throw generic exceptions. Using such generic exceptions as Error, RuntimeException, Throwable, and Exception prevents calling methods from handling true, system-generated exceptions differently than application-generated errors.
-Refer   
-
-
-
-
-
-
-
-
+Refer: Maintainability,  
 
 findDialog file : 
-1 - (22,8) 
-:Product revision
-(26,15)multiple variables should not be declared on the same line. testability and maintainability
-
 2-(26,15)  its major  bug where a quality flaw that can highly impact the developer's productivity, multiple variables should not be declared on the same line,Declaring multiple variables on one line is difficult to read.
+refer : maintainability
 
 3- (116, 13) Code smell, Critical. Empty method may confuse other developers or anyone who reads the code later, they may wonder why you have an empty method and what it is supposed to do.
+Refer :  maintainability
 
-4- (84,7) Code smell, major. commented out lines of code bloats programs and reduces readability.
+4- (84,7) Code smell, major. commented out lines of code bloats programs and reduces readability
 
 —----------------------------------------------------------------------------------------------------------------------
 Mosaab
