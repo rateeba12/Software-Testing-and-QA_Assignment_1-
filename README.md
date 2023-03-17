@@ -7,7 +7,7 @@
 
 2- Categorize the issues found by SonarQube and the explain how these issues affect the software quality: 
 Editor file :
-—---------------------------------------------------
+-------------------------------------------------
 ahmad 
 (147, 13): Cognitive complexity of methods should not be too high
 its critical code smell, where it could impact the behavior of the application in production.
@@ -53,7 +53,7 @@ Its major bug where a quality flaw that can highly impact in production.
 
 
 
-—--------------------------------------
+-------------------------------------------------
 Rateeba
 
 
@@ -88,7 +88,7 @@ Refer :  maintainability
 
 4- (84,7) Code smell, major. commented out lines of code bloats programs and reduces readability
 
-—----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------
 Mosaab
 (3, 7),(7, 7),(18, 7),(19,7): unnecessary imports should be removed.
 Its minor code smell
