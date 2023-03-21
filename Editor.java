@@ -1,6 +1,6 @@
 package edu.najah.cap;
 import edu.najah.cap.ex.EditorSaveException;
-import edu.najah.cap.ex.cannotWriteFileException;
+import edu.najah.cap.ex.CanNotWriteFileException;
 
 import java.io.*;
 import java.util.logging.Logger;
@@ -20,7 +20,6 @@ import javax.swing.KeyStroke;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-@SuppressWarnings("serial")
 public class Editor extends JFrame implements ActionListener, DocumentListener {
 
 	private static final String ACTION_1 = "Cannot write file!";
@@ -220,7 +219,7 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 
 	private int ansValue() {
 		int res;
-		res= JOptionPane.showConfirmDialog(null, "The file has changed. You want to save it?", "Save file", 0, 2);
+		res= JOptionPane.showConfirmDialog(null, "The file has changed. You want to save it?", "Save file", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 		return res ;}
 
 
@@ -240,7 +239,7 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 			logger.info(text);
 			try (PrintWriter writer = new PrintWriter(file)){
 				if (!file.canWrite())
-					throw new cannotWriteFileException(ACTION_1);
+					throw new CanNotWriteFileException(ACTION_1);
 				writer.write(text);
 				changed = false;
 			} catch (Exception ex) {
@@ -292,11 +291,11 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 		logger.info(text);
 		try (PrintWriter writer = new PrintWriter(file)) {
 			if (!file.canWrite()) {
-				throw new cannotWriteFileException(ACTION_1);
+				throw new CanNotWriteFileException(ACTION_1);
 			}
 			writer.write(text);
 			changed = false;
-		} catch (IOException | cannotWriteFileException e) {
+		} catch (IOException | CanNotWriteFileException e) {
 			e.printStackTrace();
 		}
 	}
@@ -323,7 +322,7 @@ public class Editor extends JFrame implements ActionListener, DocumentListener {
 
 	private void showErrorDialog(Exception e) {
 		e.printStackTrace();
-		JOptionPane.showMessageDialog(null, e, "Error", 0);
+		JOptionPane.showMessageDialog(null, e, "Error", JOptionPane.ERROR_MESSAGE);
 	}
 
 	private PrintWriter getWriter(File file) throws IOException {
